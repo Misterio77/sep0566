@@ -24,7 +24,7 @@
 	\right.
 \]
 
-Aplicando o método dos multiplicadores de lagrange:
+Montando a função lagrangiana:
 \[
 	\begin{aligned}
 		L & = U + \lambda(Ro)                            \\
@@ -32,41 +32,20 @@ Aplicando o método dos multiplicadores de lagrange:
 	\end{aligned}
 \]
 
-Tirando as derivadas parciais:
+Tirando as derivadas parciais e as igualando à zero (pontos estacionários):
 \[
-	\frac{dL}{dQ_a} = Q_v - \lambda P_a
-	\implies
-	\lambda_1 = \frac{Q_v}{P_a}
-\]
-\[
-	\frac{dL}{dQ_v} = Q_a - \lambda P_v
-	\implies
-	\lambda_2 = \frac{Q_a}{P_v}
+	\left\{
+	\begin{aligned}
+		\frac{dL}{dQ_a}     & = Q_v - \lambda P_a = 0     \\
+		\frac{dL}{dQ_v}     & = Q_a - \lambda P_v = 0     \\
+		\frac{dL}{d\lambda} & = R - P_a Q_a - P_v Q_v = 0
+	\end{aligned}
+	\right.
 \]
 
 \[
 	\begin{aligned}
-		\lambda_1       & = \lambda_2          \\
-		\frac{Q_v}{P_a} & = \frac{Q_a}{P_v}    \\
-		Qv              & = \frac{Q_a}{P_v}P_a
-	\end{aligned}
-\]
-
-Substituindo na equação da renda:
-\[
-	\begin{aligned}
-		R   & = P_a Q_a + P_v Q_v                            \\
-		    & = P_a Q_a + P_v\left(\frac{Q_a}{P_v}P_a\right) \\
-		    & = P_a Q_a + Q_a P_a                            \\
-		    & = 2(P_a Q_a)                                   \\
-		Q_a & = \frac{R}{2P_a}
-	\end{aligned}
-\]
-\[
-	\begin{aligned}
-		R   & = P_a Q_a + P_v Q_v                        \\
-		    & = P_a\left(\frac{R}{2P_a}\right) + P_v Q_v \\
-		    & = \frac{R}{2} + P_v Q_v                    \\
+		Q_a & = \frac{R}{2P_a} \\
 		Q_v & = \frac{R}{2P_v}
 	\end{aligned}
 \]
@@ -108,62 +87,33 @@ TODO
 
 \section{}
 \subsection{}
-Vamos resolver de forma geométrica.
 
-Os valores de demanda que buscamos são os valores de consumo ótimos.
-Graficamente, esses valores são as coordenadas do ponto onde a curva gerada
-pela função utilidade maximizada se intersecta com a reta da renda.
+\[
+	\left\{
+	\begin{aligned}
+		 & R = P_x X + P_y Y       \\
+		 & U = \sqrt{X} + \sqrt{Y}
+	\end{aligned}
+	\right.
+\]
 
-Para encontrar esse ponto, vamos igualar a função utilidade a uma constante
-\(u\) tal que a reta da renda se cruze uma, e apenas uma, vez com a função
-utilidade; ou seja, seja igual à reta tangente desta curva.
-
-Podemos encontrar esse ponto de tangente igualando a derivada da curva (gerada
-pela função de utilidade) com a derivada da reta da renda. Isso é possível
-pois o valor dessas duas derivadas coincidem apenas no ponto da tangente.
-
-Vamos começar derivando a função da curva gerada pela função \(U\):
+Montando a função lagrangiana:
 \[
 	\begin{aligned}
-		U        & = \sqrt{x} + \sqrt{y}                                        \\
-		\sqrt{y} & = U - \sqrt{x}                                               \\
-		y        & = {(U - \sqrt{x})}^2                                         \\
-		y'       & = 2(U - \sqrt{x}) \left(-\frac{1}{2} x^{\frac{-1}{2}}\right) \\
-		y'       & = \frac{\sqrt{x} - U}{\sqrt{x}}
+		L & = U + \lambda(Ro)                                    \\
+		  & = (\sqrt{X} + \sqrt{Y}) + \lambda(R - P_x X - P_y Y)
 	\end{aligned}
 \]
 
-Agora vamos derivar a reta da renda:
+Tirando as derivadas parciais e as igualando à zero (pontos estacionários):
 \[
+	\left\{
 	\begin{aligned}
-		I  & = x P_x + y P_y   \\
-		I  & = x + 3y          \\
-		y  & = \frac{I - x}{3} \\
-		y' & = -\frac{1}{3}
+		\frac{dL}{dX}       & = Y - \lambda P_x = 0   \\
+		\frac{dL}{dY}       & = X - \lambda P_y = 0   \\
+		\frac{dL}{d\lambda} & = R - P_x X - P_y Y = 0
 	\end{aligned}
+	\right.
 \]
-
-Ótimo, agora vamos igualar as duas derivadas e encontrar \(U\) em termos de
-\(x\):
-\[
-	\begin{aligned}
-		\frac{\sqrt{x} - U}{\sqrt{x}} & = -\frac{1}{3}        \\
-		3\sqrt{x} - 3 U               & = - \sqrt{x}          \\
-		4\sqrt{x}                     & = 3U                  \\
-		U                             & = \frac{4}{3}\sqrt{x}
-	\end{aligned}
-\]
-
-Podemos igualar esse valor com a função utilidade e resovler para \(y\):
-\[
-	\begin{aligned}
-		U                   & = U                    \\
-		\frac{4}{3}\sqrt{x} & = \sqrt{x} + \sqrt{y}  \\
-		\sqrt{y}            & = \frac{1}{3} \sqrt{x} \\
-		y                   & = \frac{x}{9}
-	\end{aligned}
-\]
-
-Encontramos uma outra equação de reta.
 
 \end{document}

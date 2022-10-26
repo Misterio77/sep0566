@@ -544,31 +544,83 @@ também seja zero.
 
 \section{Exercício 13}
 
+\[
+	\begin{aligned}
+		C   & = rK + wL   \\
+		500 & = 20X + 25Y
+	\end{aligned}
+\]
+
 \subsection{}
 \[
-	L = (0.5XY - 0.1X^2 - 0.05Y^2) - \lambda(rK +wL - C)
+	L = (0.5XY - 0.1X^2 - 0.05Y^2) + \lambda(20X + 25Y - 500)
 \]
 
 \subsection{}
 \[
 	\left\{
 	\begin{aligned}
-		\frac{dL}{dX}       & = 0.5Y - 0.2X = 0 \\
-		\frac{dL}{dY}       & = 0.5X - 0.1Y = 0 \\
-		\frac{dL}{d\lambda} & = rK + wL - C = 0 \\
+		\frac{dL}{dX}       & = 0.5Y - 0.2X + 20\lambda = 0 \\
+		\frac{dL}{dY}       & = 0.5X - 0.1Y + 25\lambda = 0 \\
+		\frac{dL}{d\lambda} & = 20X + 25Y - 500 = 0         \\
 	\end{aligned}
 	\right.
 \]
-TODO AGORA
 
 \subsection{}
-TODO
+
+Começando com a terceira equação, que tem duas icógnitas:
+\[
+	\begin{aligned}
+		20X + 25Y & = 500        \\
+		20X       & = 500 - 25Y  \\
+		X         & = 25 - 1.25Y
+	\end{aligned}
+\]
+
+Substituir na segunda:
+
+\[
+	\begin{aligned}
+		0         & = 0.5(25 - 1.25Y) - 0.1Y + 25\lambda \\
+		25\lambda & = 0.1Y - 0.5(25 - 1.25Y)             \\
+		25\lambda & = 0.725Y - 12.5                      \\
+		\lambda   & = 0.03Y - 0.5
+	\end{aligned}
+\]
+
+Substituindo na primeira:
+\[
+	\begin{aligned}
+		0 & = 0.5Y - 0.2(25 -1.25Y) + 20(0.03Y - 0.5) \\
+		0 & = 0.5Y - 5 + 0.25Y + 0.6Y - 10            \\
+		0 & = 1.35Y - 15                              \\
+		Y & = 11.111
+	\end{aligned}
+\]
+
+Agora unindo novamente:
+\[
+	\begin{aligned}
+		20X & = -25 * 11.1111 + 500 \\
+		20X & = 500 - 277.7777      \\
+		X   & = 222.222/20          \\
+		X   & = 11.111
+	\end{aligned}
+\]
+\[
+	\begin{aligned}
+		\lambda & = 0.03Y - 0.5        \\
+		\lambda & = 0.03(11.111) - 0.5 \\
+		\lambda & = -0.17
+	\end{aligned}
+\]
 
 \subsection{}
-TODO
+Aproximadamente 11 unidades de cada um.
 
 \subsection{}
-TODO
+O multiplicador \(\lambda\) representa
 
 \section{Exercício 14}
 \subsection{}
@@ -616,5 +668,30 @@ TODO
 
 \section{Exercício 18}
 TODO
+
+
+% =====
+
+
+\[
+	p \cdot f(x_1, x_2) = P \cdot Q = RT
+\]
+\[
+	C = x_1 \cdot w + x_2 \cdot r
+\]
+
+\[
+	L = f(x_1, x_2) + \lambda(x_1 \cdot w + x_2 \cdot r - C)
+\]
+
+\[
+	\left\{
+	\begin{aligned}
+		\frac{dL}{dx_1}     & = \frac{df}{dx_1} + \lambda \cdot w = 0 \\
+		\frac{dL}{dx_2}     & = \frac{df}{dx_2} + \lambda \cdot r = 0 \\
+		\frac{dL}{d\lambda} & = x_1 \cdot w + x_2 \cdot r - C  = 0
+	\end{aligned}
+	\right.
+\]
 
 \end{document}

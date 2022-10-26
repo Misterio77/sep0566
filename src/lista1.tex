@@ -50,7 +50,8 @@ Tirando as derivadas parciais e as igualando à zero (pontos estacionários):
 	\end{aligned}
 \]
 
-Agora basta substituir \(P_v\), \(P_a\), e \(R\) com os dados fornecidos pelo exercício:
+Agora basta substituir \(P_v\), \(P_a\), e \(R\) com os dados fornecidos pelo
+exercício:
 \[
 	\left\{
 	\begin{aligned}
@@ -68,31 +69,67 @@ Agora basta substituir \(P_v\), \(P_a\), e \(R\) com os dados fornecidos pelo ex
 \]
 
 \subsection{}
-Quando a utilidade é maximizada, a TMS é simplesmente a razão dos preços; ou seja:
+Quando a utilidade é maximizada, a TMS é simplesmente a razão dos preços; ou
+seja:
 \[
 	\frac{P_a}{P_v} = \frac{6}{2} = \frac{1}{3}
 \]
 
 \subsection{}
-Maior. A escolha que maximiza utilidade tem raio de 1 unidade de vestuário para 3 unidades de alimento. Por isso, ao ter 3 vestuários e 3 alimentos, Jane está numa situação onde trocar vestuário por alimento aumenta mais a satisfação do que o contrário, logo a TMS é maior quando comparada ao ponto ótimo.
+Maior. A escolha que maximiza utilidade tem raio de 1 unidade de vestuário para
+3 unidades de alimento. Por isso, ao ter 3 vestuários e 3 alimentos, Jane está
+numa situação onde trocar vestuário por alimento aumenta mais a satisfação do
+que o contrário, logo a TMS é maior quando comparada ao ponto ótimo.
 
-\section{}
-Um raio elasticidade-preço maior que \(1\) indica um mercado elástico. Como o raio é \(2.2\), a quantidade de vendas deve aumentar em \(44\%\).
+\section{Exercício 2}
+Um raio elasticidade-preço maior que \(1\) indica um mercado elástico. Como o
+raio é \(2.2\), a quantidade de vendas deve aumentar em \(44\%\).
 
-\section{}
+\section{Exercício 3}
+\[
+	\begin{aligned}
+		Q(Y, P) & = 2.000 + 15Y - 5.5P \\
+		P       & = 150                \\
+		Y       & = 15 000
+	\end{aligned}
+\]
+\subsection{Elasticidade-preço da demanda}
+\[
+	\begin{aligned}
+		\epsilon_{p,d} & = \frac{P}{Q(Y, P)} \cdot \frac{dQ(Y, P)}{dP} \\
+		               & = \frac{P}{2000 + 15Y - 5.5P} \cdot 5.5       \\
+		               & = \frac{82.5}{226175}                         \\
+		               & \approx 0.000365
+	\end{aligned}
+\]
+\subsection{Elasticidade-renda da demanda}
+\[
+	\begin{aligned}
+		\epsilon_{p,d} & = \frac{Y}{Q(Y, P)} \cdot \frac{dQ(Y, P)}{dY} \\
+		               & = \frac{Y}{2000 + 15Y - 5.5P} \cdot 15        \\
+		               & = \frac{225000}{226175}                       \\
+		               & \approx 0.994805
+	\end{aligned}
+\]
+
+\section{Exercício 4}
+\subsection{}
+Os coeficientes representam o peso individual de cada umas variáveis \(Y\) no
+gasto \(X1\).
+\subsection{}
+A idade tem um peso considerável, porém inferior ao da renda.
 \subsection{}
 TODO
-\subsection{}
-TODO
 
-\section{}
+
+\section{Exercício 5}
 \subsection{}
 
 \[
 	\left\{
 	\begin{aligned}
-		 & R = P_x X + P_y Y       \\
-		 & U = \sqrt{X} + \sqrt{Y}
+		 & R = P_x x + P_y y       \\
+		 & U = \sqrt{x} + \sqrt{y}
 	\end{aligned}
 	\right.
 \]
@@ -101,7 +138,7 @@ Montando a função lagrangiana:
 \[
 	\begin{aligned}
 		L & = U + \lambda(Ro)                                    \\
-		  & = (\sqrt{X} + \sqrt{Y}) + \lambda(R - P_x X - P_y Y)
+		  & = (\sqrt{x} + \sqrt{y}) + \lambda(R - P_x x - P_y y)
 	\end{aligned}
 \]
 
@@ -109,11 +146,235 @@ Tirando as derivadas parciais e as igualando à zero (pontos estacionários):
 \[
 	\left\{
 	\begin{aligned}
-		\frac{dL}{dX}       & = Y - \lambda P_x = 0   \\
-		\frac{dL}{dY}       & = X - \lambda P_y = 0   \\
-		\frac{dL}{d\lambda} & = R - P_x X - P_y Y = 0
+		\frac{dL}{dx}       & = \frac{1}{2\sqrt{x}} - \lambda P_x \\
+		\frac{dL}{dy}       & = \frac{1}{2\sqrt{y}} - \lambda P_y \\
+		\frac{dL}{d\lambda} & =  R - P_x x - P_y y
 	\end{aligned}
 	\right.
 \]
+\[
+	\left\{
+	\begin{aligned}
+		\frac{1}{2\sqrt{x}} - \lambda  & = 0 \\
+		\frac{1}{2\sqrt{y}} - 3\lambda & = 0 \\
+		R - x - 3y                     & = 0
+	\end{aligned}
+	\right.
+\]
+
+Isolando o \(\lambda\) na primeira equação:
+\[
+	\lambda = \frac{1}{2\sqrt{x}}
+\]
+
+E substituindo na segunda:
+\[
+	\begin{aligned}
+		3\lambda            & = \frac{1}{2\sqrt{y}} \\
+		\frac{3}{2\sqrt{x}} & = \frac{1}{2\sqrt{y}} \\
+		2\sqrt{x}           & = 6\sqrt{y}           \\
+		\sqrt{x}            & = 3\sqrt{y}
+	\end{aligned}
+\]
+
+Inserindo \(x\) na terceira equação e isolando \(y\):
+
+\[
+	\begin{aligned}
+		I & = x +3y              \\
+		I & = \sqrt{x}^2 +3y     \\
+		I & = (3\sqrt{y})^2 + 3y \\
+		I & = 12y                \\
+		y & = \frac{I}{12}
+	\end{aligned}
+\]
+
+Inserindo \(y\) na terceira equação e isolando \(x\):
+
+\[
+	\begin{aligned}
+		I & = x + 3y         \\
+		I & = x +\frac{I}{4} \\
+		x & = \frac{3I}{4}
+	\end{aligned}
+\]
+
+\subsection{}
+\[ x = \frac{3I}{4} = \frac{300}{4} = 75 \]
+\[ y = \frac{I}{12} = \frac{100}{12} = \frac{25}{3} \]
+
+\subsection{}
+A elastcidade-renda da demanda por roupas \(x/I\) é \(1/12\). Enquanto a da
+demanda por alimentos é \(3/4\).
+
+\section{Exercício 6}
+\subsection{}
+\begin{center}
+	\begin{tabular}{|c | c | c | c|}
+		\hline
+		Funcionários & Produção & Produto Marginal & Produto Médio \\
+		\hline
+		1            & 10       & 10               & 10            \\
+		\hline
+		2            & 17       & 7                & 8.5           \\
+		\hline
+		3            & 22       & 5                & 7.33          \\
+		\hline
+		4            & 25       & 3                & 6.25          \\
+		\hline
+		5            & 26       & 1                & 5.2           \\
+		\hline
+		5            & 25       & -1               & 4.16          \\
+		\hline
+		5            & 23       & -2               & 3.285         \\
+		\hline
+	\end{tabular}
+\end{center}
+
+O produto médio é calculado dividindo a quantidade de produção pela quantidade
+de rabalho:
+\[
+    \frac{q}{L}
+\]
+
+Por exemplo, para \(q = 26\) e \(L=5\):
+\[
+    \frac{26}{5} = 5.2
+\]
+
+O produto marginal é dado pela variação da quantidade de produção dividida pela
+variação correspondente da quantidade de trabalho:
+\[
+    \frac{\Delta q}{\Delta L}
+\]
+
+Por exemplo, para \(q = 17\) e \(L = 2\):
+\[
+    \frac{17-10}{2-1} = 7
+\]
+
+\subsection{}
+Sim. Ao ultrapassar 5 funcionários, o número de cadeiras passa a diminuir.
+\subsection{}
+Existem vários motivos possíves: incapacidade de absorver mais força de
+trabalhos (ex: estações de trabalho), cultura da empresa, improdutividade,
+distrações, etc.
+
+\section{Exercício 7}
+É 200. Neste ponto, a substituição de trabalho por maquinário/capital tem
+\(1/4\) da eficiência quando comparada à substituição contrária.
+
+TODO: Como saber se não é 12.5? 
+
+\section{Exercício 8}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 9}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 10}
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 11}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 12}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 13}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 14}
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 15}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 16}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 17}
+\subsection{}
+TODO
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 17}
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 18}
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{Exercício 18}
+TODO
 
 \end{document}

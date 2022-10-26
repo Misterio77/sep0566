@@ -1,5 +1,169 @@
-\documentclass{letter}
+\documentclass{article}
+\usepackage{amsmath}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\title{Lista 1 --- SEP0566}
+\author{Gabriel Fontes}
 
 \begin{document}
-Irineu
+
+\maketitle
+
+\section{Exercício 1}
+\subsection{}
+\subsection{}
+\subsection{}
+
+\[
+	\left\{
+	\begin{aligned}
+		 & R = P_a Q_a + P_v Q_v \\
+		 & U = Q_a Q_v
+	\end{aligned}
+	\right.
+\]
+
+Aplicando o método dos multiplicadores de lagrange:
+\[
+	\begin{aligned}
+		L & = U + \lambda(Ro)                            \\
+		  & = (Q_a Q_v) + \lambda(R - P_a Q_a - P_v Q_v)
+	\end{aligned}
+\]
+
+Tirando as derivadas parciais:
+\[
+	\frac{dL}{dQ_a} = Q_v - \lambda P_a
+	\implies
+	\lambda_1 = \frac{Q_v}{P_a}
+\]
+\[
+	\frac{dL}{dQ_v} = Q_a - \lambda P_v
+	\implies
+	\lambda_2 = \frac{Q_a}{P_v}
+\]
+
+\[
+	\begin{aligned}
+		\lambda_1       & = \lambda_2          \\
+		\frac{Q_v}{P_a} & = \frac{Q_a}{P_v}    \\
+		Qv              & = \frac{Q_a}{P_v}P_a
+	\end{aligned}
+\]
+
+Substituindo na equação da renda:
+\[
+	\begin{aligned}
+		R   & = P_a Q_a + P_v Q_v                            \\
+		    & = P_a Q_a + P_v\left(\frac{Q_a}{P_v}P_a\right) \\
+		    & = P_a Q_a + Q_a P_a                            \\
+		    & = 2(P_a Q_a)                                   \\
+		Q_a & = \frac{R}{2P_a}
+	\end{aligned}
+\]
+\[
+	\begin{aligned}
+		R   & = P_a Q_a + P_v Q_v                        \\
+		    & = P_a\left(\frac{R}{2P_a}\right) + P_v Q_v \\
+		    & = \frac{R}{2} + P_v Q_v                    \\
+		Q_v & = \frac{R}{2P_v}
+	\end{aligned}
+\]
+
+Agora basta substituir \(P_v\), \(P_a\), e \(R\) com os dados fornecidos pelo exercício:
+\[
+	\left\{
+	\begin{aligned}
+		 & R = 12  \\
+		 & P_a = 1 \\
+		 & P_v = 3
+	\end{aligned}
+	\right.
+\]
+\[
+	\begin{aligned}
+		Q_a & = \frac{12}{2} = 6 \\
+		Q_v & = \frac{12}{6} = 2
+	\end{aligned}
+\]
+
+\subsection{}
+Quando a utilidade é maximizada, a TMS é simplesmente a razão dos preços; ou seja:
+\[
+	\frac{P_a}{P_v} = \frac{6}{2} = \frac{1}{3}
+\]
+
+\subsection{}
+Maior. A escolha que maximiza utilidade tem raio de 1 unidade de vestuário para 3 unidades de alimento. Por isso, ao ter 3 vestuários e 3 alimentos, Jane está numa situação onde trocar vestuário por alimento aumenta mais a satisfação do que o contrário, logo a TMS é maior quando comparada ao ponto ótimo.
+
+\section{}
+Um raio elasticidade-preço maior que \(1\) indica um mercado elástico. Como o raio é \(2.2\), a quantidade de vendas deve aumentar em \(44\%\).
+
+\section{}
+\subsection{}
+TODO
+\subsection{}
+TODO
+
+\section{}
+\subsection{}
+Vamos resolver de forma geométrica.
+
+Os valores de demanda que buscamos são os valores de consumo ótimos.
+Graficamente, esses valores são as coordenadas do ponto onde a curva gerada
+pela função utilidade maximizada se intersecta com a reta da renda.
+
+Para encontrar esse ponto, vamos igualar a função utilidade a uma constante
+\(u\) tal que a reta da renda se cruze uma, e apenas uma, vez com a função
+utilidade; ou seja, seja igual à reta tangente desta curva.
+
+Podemos encontrar esse ponto de tangente igualando a derivada da curva (gerada
+pela função de utilidade) com a derivada da reta da renda. Isso é possível
+pois o valor dessas duas derivadas coincidem apenas no ponto da tangente.
+
+Vamos começar derivando a função da curva gerada pela função \(U\):
+\[
+	\begin{aligned}
+		U        & = \sqrt{x} + \sqrt{y}                                        \\
+		\sqrt{y} & = U - \sqrt{x}                                               \\
+		y        & = {(U - \sqrt{x})}^2                                         \\
+		y'       & = 2(U - \sqrt{x}) \left(-\frac{1}{2} x^{\frac{-1}{2}}\right) \\
+		y'       & = \frac{\sqrt{x} - U}{\sqrt{x}}
+	\end{aligned}
+\]
+
+Agora vamos derivar a reta da renda:
+\[
+	\begin{aligned}
+		I  & = x P_x + y P_y   \\
+		I  & = x + 3y          \\
+		y  & = \frac{I - x}{3} \\
+		y' & = -\frac{1}{3}
+	\end{aligned}
+\]
+
+Ótimo, agora vamos igualar as duas derivadas e encontrar \(U\) em termos de
+\(x\):
+\[
+	\begin{aligned}
+		\frac{\sqrt{x} - U}{\sqrt{x}} & = -\frac{1}{3}        \\
+		3\sqrt{x} - 3 U               & = - \sqrt{x}          \\
+		4\sqrt{x}                     & = 3U                  \\
+		U                             & = \frac{4}{3}\sqrt{x}
+	\end{aligned}
+\]
+
+Podemos igualar esse valor com a função utilidade e resovler para \(y\):
+\[
+	\begin{aligned}
+		U                   & = U                    \\
+		\frac{4}{3}\sqrt{x} & = \sqrt{x} + \sqrt{y}  \\
+		\sqrt{y}            & = \frac{1}{3} \sqrt{x} \\
+		y                   & = \frac{x}{9}
+	\end{aligned}
+\]
+
+Encontramos uma outra equação de reta.
+
 \end{document}

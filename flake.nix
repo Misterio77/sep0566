@@ -8,8 +8,12 @@
 
   outputs = { self, nixpkgs, flake-utils }: flake-utils.lib.eachDefaultSystem (system:
     let pkgs = nixpkgs.legacyPackages.${system}; in
-    {
+    rec {
       packages.default = pkgs.callPackage ./. { };
+      devShells.default = pkgs.mkShell {
+        inputsFrom = [ packages.default ];
+        buildInputs = [ pkgs.texlab ];
+      };
     }
   );
 }

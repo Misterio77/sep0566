@@ -1,7 +1,7 @@
 { stdenv, pandoc, texlive }: stdenv.mkDerivation {
   pname = "listas";
   version = "0.1.0";
-  buildInputs = [ texlive.combined.scheme-small ];
+  buildInputs = [ texlive.combined.scheme-medium ];
   src = ./.;
 
   installPhase = ''

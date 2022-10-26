@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage{amsmath}
 
-\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\renewcommand{\thesubsection}{\alph{subsection}}
+\renewcommand{\thesubsubsection}{\roman{subsubsection}}
 
 \title{Lista 1 --- SEP0566}
 \author{Gabriel Fontes}
@@ -395,39 +396,151 @@ TODO: gráfico
 
 \section{Exercício 9}
 \subsection{}
-TODO
+
+A receita marginal é determinada pela receita \(R\) derivada com relação a
+quantidade de produção \(Q\). A receita por sua vez é dada pelo preço \(P\)
+multiplicado pela quantidade \(Q\).
+
+\[
+	RMg = \frac{dR}{dQ} = \frac{dPQ}{dQ} = P = 10
+\]
+Ou seja, produzir mais um produto irá aumentar a receita em U\$10, o mesmo
+valor unitário do produto.
+
 \subsection{}
-TODO
+
+O \(CMg\) é dado pelo preço do trabalho/insumo \(w = 10\) dividido pelo produto
+marginal do trabalho, este dado pela função de produção \(Q\) derivada em
+relação a quantidade de insumo \(X\).
+
+Vamos encontrar o produto marginal do trabalho derivando \(Q\):
+\[
+	\begin{aligned}
+		Q                      & = 10x - 0.5x^2 \\
+		\implies \frac{dQ}{dX} & = 10 - x
+	\end{aligned}
+\]
+
+E agora substituindo em \(CMg = w/PMg\):
+\[
+	\begin{aligned}
+		CMg & = \frac{10}{10 - x} \\
+		CMg & = 1 - \frac{x}{10}
+	\end{aligned}
+\]
+
+TODO: escrever CMg em função de Q e não x (não consegui)
+
 \subsection{}
 TODO
 
 \section{Exercício 10}
 \subsection{}
-TODO
+
+\subsubsection{}
+\(0.7\)
+
+\subsubsection{}
+\(0.35\)
+
 \subsection{}
-TODO
+
+Alterar a quantidade de mão de obra afeta mais significativamente a produção do
+quando comparado ao capital.
 
 \section{Exercício 11}
 \subsection{}
-TODO
+\subsubsection{}
+0.45
+\subsubsection{}
+0.20
+\subsubsection{}
+0.30
+
 \subsection{}
-TODO
+\[
+	2\% * 0.45 = 1.9\%
+\]
+
 \subsection{}
-TODO
+\[
+	-3\% * 0.30 = -0.9\%
+\]
+
 \subsection{}
-TODO
+
+Há rendimentos de escala decrescentes.
 
 \section{Exercício 12}
+
 \subsection{}
-TODO
+
+Zero.
+
 \subsection{}
-TODO
+
+Se dá pelo \(Q\) dividido por \(L\), basta abaixar um de cada expoente:
+\[
+	PME(L) = -0.005L^2 + 0.3L
+\]
+
 \subsection{}
-TODO
+
+Se dá pela derivada de \(Q\) em relação à \(L\):
+
+\[
+	\begin{aligned}
+		PMA(L) & = \frac{d}{dL}(-0.005L^3 + 0.3L^2) \\
+		       & = -0.015L^2 + 0.6L
+	\end{aligned}
+\]
+
+
 \subsection{}
-TODO
+
+Basta derivar \(PMA\) e igualar a zero para obter seus pontos críticos:
+
+\[
+	\begin{aligned}
+		\frac{d}{dL}PMA & = - 0.03L + 0.6 = 0 \\
+		0.03L           & = 0.6               \\
+		L               & = 20
+	\end{aligned}
+\]
+
+Temos \(L = 20 \) como ponto crítico.
+
+Depois derivar novamente e analizar os sinais para encontrar onde a concavidade
+é voltada para baixo:
+
+\[
+	\frac{d}{dL}PMA' = - 0.03
+\]
+
+Uma função constante sempre negativa, logo concavidade para baixo e o ponto
+crítico é ponto de máximo.
+
+Portanto, para maximizar o produto marginal, temos \(L = 20\).
+
 \subsection{}
-TODO
+
+Basta igualar \(PMA\) e \(PME\).
+
+\[
+	\begin{aligned}
+		PMA              & = PME              \\
+		-0.015L^2 + 0.6L & = -0.005L^2 + 0.3L \\
+		0                & = 0.01L^2 - 0.3L   \\
+		0                & = L(0.01L - 0.3)   \\
+		0                & = L(L - 30) 
+	\end{aligned}
+\]
+
+No ponto \(L=30\) se têm o produto médio máximo, adicionar mais mão de obra o
+diminuirá.
+
+A outra intersecção é quando a produção é zero, é de se esperar que a marginal
+também seja zero.
 
 \section{Exercício 13}
 \subsection{}

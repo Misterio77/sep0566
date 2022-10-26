@@ -12,8 +12,16 @@
 
 \section{Exercício 1}
 \subsection{}
+
+TODO: gráfico
+
 \subsection{}
+
+TODO: gráfico
+
 \subsection{}
+
+TODO: gráfico
 
 \[
 	\left\{
@@ -69,6 +77,7 @@ exercício:
 \]
 
 \subsection{}
+
 Quando a utilidade é maximizada, a TMS é simplesmente a razão dos preços; ou
 seja:
 \[
@@ -76,6 +85,7 @@ seja:
 \]
 
 \subsection{}
+
 Maior. A escolha que maximiza utilidade tem raio de 1 unidade de vestuário para
 3 unidades de alimento. Por isso, ao ter 3 vestuários e 3 alimentos, Jane está
 numa situação onde trocar vestuário por alimento aumenta mais a satisfação do
@@ -114,11 +124,16 @@ raio é \(2.2\), a quantidade de vendas deve aumentar em \(44\%\).
 
 \section{Exercício 4}
 \subsection{}
+
 Os coeficientes representam o peso individual de cada umas variáveis \(Y\) no
 gasto \(X1\).
+
 \subsection{}
+
 A idade tem um peso considerável, porém inferior ao da renda.
+
 \subsection{}
+
 TODO
 
 
@@ -200,10 +215,12 @@ Inserindo \(y\) na terceira equação e isolando \(x\):
 \]
 
 \subsection{}
+
 \[ x = \frac{3I}{4} = \frac{300}{4} = 75 \]
 \[ y = \frac{I}{12} = \frac{100}{12} = \frac{25}{3} \]
 
 \subsection{}
+
 A elastcidade-renda da demanda por roupas \(x/I\) é \(1/12\). Enquanto a da
 demanda por alimentos é \(3/4\).
 
@@ -234,51 +251,147 @@ demanda por alimentos é \(3/4\).
 O produto médio é calculado dividindo a quantidade de produção pela quantidade
 de rabalho:
 \[
-    \frac{q}{L}
+	\frac{q}{L}
 \]
 
 Por exemplo, para \(q = 26\) e \(L=5\):
 \[
-    \frac{26}{5} = 5.2
+	\frac{26}{5} = 5.2
 \]
 
 O produto marginal é dado pela variação da quantidade de produção dividida pela
 variação correspondente da quantidade de trabalho:
 \[
-    \frac{\Delta q}{\Delta L}
+	\frac{\Delta q}{\Delta L}
 \]
 
 Por exemplo, para \(q = 17\) e \(L = 2\):
 \[
-    \frac{17-10}{2-1} = 7
+	\frac{17-10}{2-1} = 7
 \]
 
 \subsection{}
+
 Sim. Ao ultrapassar 5 funcionários, o número de cadeiras passa a diminuir.
+
 \subsection{}
+
 Existem vários motivos possíves: incapacidade de absorver mais força de
 trabalhos (ex: estações de trabalho), cultura da empresa, improdutividade,
 distrações, etc.
 
 \section{Exercício 7}
+
 É 200. Neste ponto, a substituição de trabalho por maquinário/capital tem
 \(1/4\) da eficiência quando comparada à substituição contrária.
 
-TODO: Como saber se não é 12.5? 
+TODO: Como saber se não é 12.5?
 
 \section{Exercício 8}
 \subsection{}
-TODO
+
+O produto marginal se dá pela divisão da variação da produção pela variação do
+insumo. Portanto, para obter a função do PMA, iremos derivar \(Q\) com relação
+à \(x\):
+
+\[
+	\begin{aligned}
+		Q(x)             & = 6x^2 - 0.4x^3 \\
+		\frac{dQ(x)}{dx} & = 12x - 1.2x^2
+	\end{aligned}
+\]
+
 \subsection{}
-TODO
+
+O produto médio se dá pela divisão da produção pela quantidade de insumo. Então basta dividir \(Q\) por \(x\):
+
+\[
+	\frac{Q(x)}{x} = \frac{6x^2 - 0.4x^3}{x} = 6x - 0.4x^2
+\]
+
 \subsection{}
-TODO
+
+Pontos críticos são caracterizados por inclinação, isto é, derivada zero. Vamos
+derivar e igualar para encontrar os pontos críticos. Após isso, iremos derivar
+mais uma vez e observar o sinal para determinar a concavidade de \(G\) em cada
+ponto crítico, e isso nos apontará se é ponto máximo ou mínimo.
+
+Buscamos um ponto crítico onde a concavidade seja para baixo, isto é, uma raíz
+de \(G'(x)\) cujo \(G''(x)\) seja negativo.
+
+\[
+	\begin{aligned}
+		G'(x)        & = 0      \\
+		12x - 1.2x^2 & = 0      \\
+		12x          & = 1.2x^2 \\
+		x_1          & = 10     \\
+		x_2          & = 0
+	\end{aligned}
+\]
+
+Agora verificar a concavidade em \(x=10\) e \(x=0\):
+
+\[
+	\begin{aligned}
+		G''(x)  & = 12 - 2.4x \\
+		G''(10) & = 12 - 24   \\
+		        & = -12 < 0   \\
+		G''(0)  & = 12 - 0    \\
+		        & = 12 > 0
+	\end{aligned}
+\]
+
+Portanto, nosso ponto \(x\) que maximiza \(Q\) é \(x = 10\).
+
 \subsection{}
-TODO
+
+Faremos o mesmo que o anterior, mas para a função PMA. Ou seja, nossa função a
+ser derivada duas vezes é a \(G'(x)\).
+
+\[
+	\begin{aligned}
+		G''(x)    & = 0    \\
+		12 - 2.4x & = 0    \\
+		12        & = 2.4x \\
+		x         & = 5
+	\end{aligned}
+\]
+
+Agora verificar a concavidade em \(x=5\):
+
+\[
+	G'''(x)  = - 2.4
+\]
+
+A terceira derivada de \(G\) é sempre negativa (ou seja, G' é sempre concava
+para baixo) e só temos um ponto crítico, então podemos concluir que o ponto de
+máximo da PMA é em \(x=5\).
+
 \subsection{}
-TODO
+
+Vamos inspecionar os pontos críticos e concavidade da nossa função PME:
+
+\[
+	\begin{aligned}
+		PME'(x)        & = 0   \\
+		(6x - 0.4x^2)' & = 0   \\
+		6 - 0.8x       & = 0   \\
+		x              & = 7.5
+	\end{aligned}
+\]
+
+Temos apenas uma raiz. Vamos verificar a concavidade:
+
+\[
+	PME''(x) = -0.8
+\]
+
+Mais uma vez, uma concavidade sempre para baixo. Podemos então concluir que o
+ponto de máximo da PME é \(x=7.5\).
+
 \subsection{}
-TODO
+
+TODO: gráfico
 
 \section{Exercício 9}
 \subsection{}
